@@ -1,0 +1,836 @@
+* {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -o-box-sizing: border-box;
+}
+
+
+/*清除浮动*/
+
+.clearFloat {
+    zoom: 1;
+}
+
+.clearFloat:after {
+    display: block;
+    clear: both;
+    content: "";
+    visibility: hidden;
+    height: 0;
+}
+
+
+
+html,
+body {
+    width: 100%;
+    min-width: 1280px;
+}
+
+.header {
+    width: 100%;
+    height: 56px;
+}
+
+.header-l {
+    height: 100%;
+    float: left;
+    margin-left: 59px;
+}
+
+.header-l a {
+    display: block;
+    height: 56px;
+}
+
+.header-l .logo {
+    display: block;
+    float: left;
+    width: 31px;
+    height: 31px;
+    margin-top: 12px;
+}
+
+.header-l .companyName {
+    display: inline-block;
+    float: left;
+    height: 56px;
+    font-size: 21px;
+    font-family: "黑体";
+    line-height: 56px;
+    margin-left: 11px;
+}
+
+.header-r {
+    float: right;
+    padding-right: 20px;
+}
+
+.header-r ul li {
+    display: inline-block;
+    width: 90px;
+    height: 56px;
+    cursor: pointer;
+    text-align: center;
+}
+
+.header ul li:hover {
+    border-bottom: 3px solid red;
+}
+
+.header ul li:hover a {
+    color: red;
+}
+
+.header ul li a {
+    display: block;
+    height: 56px;
+    font-size: 14px;
+    line-height: 56px;
+}
+
+.header #login {
+    background: url(../img/login.png) no-repeat;
+    background-position: 12px 20px;
+}
+
+.header #login a {
+    color: red;
+}
+
+.home {
+    border-bottom: 3px solid red;
+}
+
+.home a {
+    color: red;
+}
+
+.content {
+    position: relative;
+    width: 100%;
+}
+
+.content .banner {
+    position: relative;
+    height: 690px;
+    overflow: hidden;
+}
+
+.content .banner .banner-img img {
+    width: 100%;
+    height: 691px;
+}
+
+.content .banner .banner-text {
+    position: absolute;
+    top: 230px;
+    left: 126px;
+}
+
+.content .banner .banner-text h2 {
+    font-family: "Arial";
+    color: #fff;
+    font-size: 60px;
+}
+
+.content .banner .banner-text p {
+    margin-top: 30px;
+    color: #fff;
+    font-size: 21px;
+}
+
+.content .banner .banner-text input {
+    margin-top: 66px;
+    width: 330px;
+    height: 64px;
+    background: #e74f4d;
+    border: none;
+    cursor: pointer;
+    font-size: 30px;
+    color: #fff;
+}
+
+.feature {
+    width: 100%;
+    height: 250px;
+}
+
+.feature .feature-same {
+    position: relative;
+    text-align: center;
+    float: left;
+    width: 25%;
+    height: 250px;
+}
+
+.feature .feature-same img {
+    margin-top: 46px;
+    margin-bottom: 46px;
+}
+
+.feature .feature-same p {
+    width: 154px;
+    font-size: 14px;
+    font-family: "黑体";
+    text-align: center;
+    margin: 0 auto;
+}
+
+.feature .feature-same span {
+    display: block;
+    height: 52px;
+    width: 2px;
+    background: #bbb;
+    position: absolute;
+    top: 134px;
+    right: 0;
+}
+
+.about-us {
+    width: 100%;
+}
+
+.about-us .about-us-title {
+    width: 100%;
+    height: 360px;
+    background: #edecec;
+    text-align: center;
+}
+
+.about-us .about-us-title img {
+    margin-top: 88px;
+    margin-bottom: 48px;
+}
+
+.about-us .about-us-title p {
+    font-size: 54px;
+    font-family: "黑体";
+    color: #323333;
+    opacity: 0.5;
+}
+
+
+
+
+
+/*select样式列表忽略*/
+
+.about-us-activity .activity-address select {
+    width: 236px;
+    height: 36px;
+    text-indent: 7px;
+    color: #a8aaaa;
+    font-size: 12px;
+    cursor: pointer;
+    outline: none;
+    /*Chrome和Firefox里面的边框是不一样的，所以复写了一下*/
+    /*border: solid 1px #000;*/
+    /*很关键：将默认的select选择框样式清除*/
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+
+    /*在选择框的最右侧中间显示小箭头图片以及设置背景颜色白色*/
+    background: url("../img/select-arrow.jpg") no-repeat 208px center;
+    background-color: #fff;
+
+    /*为下拉小箭头留出一点位置，避免被文字覆盖*/
+    padding-right: 30px;
+}
+
+
+/*清除ie的默认选择框样式清除，隐藏下拉箭头*/
+
+select::-ms-expand {
+    display: none;
+}
+
+.about-us-activity .activity-address select:hover {
+    border: 1px solid #be4e48;
+}
+
+.about-us-activity .activity-address select option {
+    /*还么有更多关于改变option的内容，所以还是用div之类的模拟下拉列表吧*/
+}
+
+.about-us-activity {
+    width: 100%;
+    height: 340px;
+    background: url("../img/about-us-activity.jpg") no-repeat;
+    -moz-background-size: 100% 100%;
+    background-size: 100% 100%;
+    padding-top: 54px;
+    position: relative;
+}
+
+.about-us-activity>h2 {
+    text-align: center;
+    margin-bottom: 12px;
+    font-size: 21px;
+    color: #fff;
+}
+
+.about-us-activity>i {
+    display: block;
+    width: 30px;
+    height: 2px;
+    background: #fff;
+    margin: 0 auto;
+}
+
+.about-us-activity>p {
+    text-align: center;
+    margin-top: 18px;
+    margin-bottom: 52px;
+    font-size: 12px;
+    color: #fff;
+}
+
+
+
+/*下拉菜单css*/
+
+.about-us-activity .activity-address {
+    width: 1050px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    margin: auto;
+}
+
+.about-us-activity .activity-address div {
+    position: relative;
+    float: left;
+    width: 236px;
+    text-indent: 7px;
+    color: #a8aaaa;
+    font-size: 12px;
+    cursor: pointer;
+    margin-right: 30px;
+    overflow: hidden;
+}
+
+.about-us-activity .activity-address div:hover {
+    border: 1px solid #be4e48;
+}
+
+.about-us-activity .activity-address div h3 {
+    height: 36px;
+    line-height: 36px;
+    background: url("../img/select-arrow.jpg") no-repeat 208px center;
+    background-color: #fff;
+}
+
+.about-us-activity .activity-address div ul {
+    display: none;
+    z-index: 100;
+}
+
+.about-us-activity .activity-address div:hover ul {
+    display: block;
+}
+
+.about-us-activity .activity-address div ul li {
+    height: 27px;
+    line-height: 27px;
+    background: #e3e2e4;
+    padding-left: 20px;
+    z-index: 100;
+}
+
+.about-us-activity .activity-address div ul li:hover {
+    background: url(../img/select-hover.png) no-repeat 7px center;
+    background-color: #be4e48;
+    border: 1px solid #be4e48;
+}
+
+.about-us-activity .activity-address .activity-search {
+    width: 236px;
+    height: 36px;
+    background: #be4e48;
+    font-size: 14px;
+    border: none;
+    color: #fff;
+    text-align: center;
+    line-height: 36px;
+    cursor: pointer;
+    margin-right: 0;
+    /*给了字体间距后就不会居中显示，解决办法是左padding=字体间距像素*/
+    letter-spacing: 25px;
+    padding-left: 25px;
+}
+
+.activity-show {
+    width: 100%;
+    height: 605px;
+    background: #f7f7f7;
+    position: relative;
+    z-index: 1;
+}
+
+.activity-show-content {
+    width: 982px;
+    height: 394px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+}
+
+.activity-show-content>div {
+    float: left;
+    margin-right: 38px;
+    text-align: center;
+}
+
+.activity-show-content img {
+    display: block;
+    padding: 14px 8px;
+    background: #fff;
+}
+
+.activity-show-content h4 {
+    font-size: 14px;
+    margin-top: 8px;
+    letter-spacing: 2px;
+}
+
+.activity-show-content p {
+    font-size: 12px;
+    margin: 8px 0;
+}
+
+.activity-show-shanghai>h4 {
+    font-size: 24px;
+    font-family: "黑体";
+    letter-spacing: 18px;
+    padding-left: 18px;
+    margin-top: 0;
+}
+
+.activity-show-xianggan {
+    margin-right: 0 !important;
+}
+
+.about-us-text {
+    width: 100%;
+}
+
+.about-us-text-section1 {
+    height: 567px;
+    width: 100%;
+    position: relative;
+}
+
+.about-us-text-section1-l {
+    float: left;
+    height: 100%;
+    width: 70%;
+    background: url("../img/about-us-text-section1.jpg") no-repeat;
+    -moz-background-size: cover;
+    background-size: cover;
+    position: relative;
+}
+
+.about-us-text-section1-l img {
+    position: absolute;
+    right: -2px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.about-us-text-section1-l div {
+    width: 500px;
+    height: 350px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    text-align: center;
+    color: #fff;
+    padding: 20px;
+}
+
+.about-us-text-section1-l div h1 {
+    font-size: 50px;
+}
+
+.about-us-text-section1-l div p {
+    font-size: 158px;
+}
+
+.about-us-text-section1-l div span {
+    font-size: 22px;
+}
+
+.about-us-text-section1-r {
+    height: 100%;
+    width: 30%;
+    margin-left: 70%;
+    position: relative;
+}
+
+.about-us-text-section1-r .wrapper {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.about-us-text-section1-r .wrapper div {
+    width: 300px;
+    height: 300px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+}
+
+.about-us-text-section1-r .wrapper h1 span {
+    color: #e74f4d;
+}
+
+.about-us-text-section1-r .wrapper p {
+    height: 126px;
+    text-align: left;
+    overflow: hidden;
+    font-size: 14px;
+    line-height: 25px;
+    color: #B3AFAC;
+    margin: 30px 0 60px 0;
+}
+
+.about-us-text-section1-r .wrapper a {
+    display: block;
+    width: 106px;
+    height: 34px;
+    border: 1px solid #e74f4d;
+    background: #fff;
+    line-height: 34px;
+    margin: 0 auto;
+    cursor: pointer;
+}
+
+.about-us-text-section1-r .wrapper ul {
+    width: 60px;
+    position: absolute;
+    top: 450px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.about-us-text-section1-r .wrapper ul li {
+    float: left;
+    height: 10px;
+    width: 10px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    border: 1px solid #929292;
+    cursor: pointer;
+}
+
+.about-us-detail-2 {
+    display: none;
+}
+
+.about-us-detail-3 {
+    display: none;
+}
+
+.banner-btn-2 {
+    margin: 0 15px;
+}
+
+.banner-btn-select {
+    background: #929292;
+}
+
+
+
+.about-us-text-section2 {
+    width: 100%;
+    height: 520px;
+    position: relative;
+}
+
+.about-us-text-section2-l {
+    float: left;
+    width: 70%;
+    height: 520px;
+    position: relative;
+}
+
+.about-us-text-section2-l div {
+    width: 50%;
+    height: 520px;
+    float: left;
+    position: relative;
+    text-align: center;
+}
+
+.about-us-text-section2-l div p {
+    margin-top: 174px;
+    color: #fff;
+    font-size: 21px;
+    font-family: "黑体";
+}
+
+.about-us-text-section2-l div i {
+    display: block;
+    width: 40px;
+    height: 2px;
+    background: #fff;
+    margin: 25px auto;
+}
+
+.about-us-text-section2-l div a {
+    display: block;
+    border: 1px solid #fff;
+    color: #fff;
+    width: 170px;
+    height: 44px;
+    line-height: 44px;
+    margin: 0 auto;
+    font-size: 21px;
+    font-family: "黑体";
+}
+
+.about-us-text-section2-l div:nth-child(1) {
+    background: #e74f4d;
+}
+
+.about-us-text-section2-l div:nth-child(2) p {
+    color: #000;
+}
+
+.about-us-text-section2-l div:nth-child(2) i {
+    background: #ababaa;
+}
+
+.about-us-text-section2-l div:nth-child(2) a {
+    color: #e74f4d;
+    border-color: #e74f4d;
+}
+
+.about-us-text-section2-l img {
+    position: absolute;
+    right: -24px;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.about-us-text-section2-r {
+    width: 30%;
+    height: 520px;
+    margin-left: 70%;
+}
+
+.about-us-text-section2-r img {
+    width: 100%;
+}
+
+.about-us-text-section3 {
+    width: 100%;
+    height: 700px;
+    padding-top: 118px;
+    text-align: center;
+}
+
+.about-us-text-section3>div {
+    padding: 20px 20px;
+}
+
+.about-us-text-section3>div:nth-child(2) {
+    margin-top: 50px;
+}
+
+.about-us-text-section3 h2 {
+    font-size: 18px;
+}
+
+.about-us-text-section3 i {
+    display: block;
+    width: 40px;
+    height: 2px;
+    background: #e74f4d;
+    margin: 25px auto;
+}
+
+.about-us-text-section3 p {
+    color: #ababab;
+}
+
+.about-us-text-section3 .wrapper {
+    width: 1000px;
+    height: 300px;
+    margin: 0 auto;
+}
+
+.about-us-text-section3-l {
+    width: 310px;
+    height: 300px;
+    float: left;
+    margin-right: 50px;
+    text-align: left;
+}
+
+.about-us-text-section3-l div {
+    width: 310px;
+    height: 100px;
+    padding: 10px 10px;
+    font-size: 14px;
+    font-family: "SimHei";
+    color: rgba(35, 24, 21, 0.8);
+}
+
+.about-us-text-section3-l a {
+    display: block;
+    cursor: pointer;
+}
+
+.about-us-text-section3-l a:hover {
+    color: #e74f4d;
+}
+
+.about-us-text-section3-l p {
+    padding-top: 10px;
+}
+
+.about-us-text-section3-r {
+    width: 640px;
+    height: 300px;
+    float: left;
+}
+
+.about-us-text-section3-r input[type="text"] {
+    width: 300px;
+    height: 44px;
+    background: #E3E3E3;
+    padding-left: 10px;
+    font-size: 14px;
+    color: #4E3A4F;
+    border: 0;
+    margin-right: 40px;
+    margin-bottom: 16px;
+}
+
+.about-us-text-section3-r input[type="text"]:nth-child(2),
+.about-us-text-section3-r input[type="text"]:nth-child(4) {
+    margin-right: 0;
+}
+
+.about-us-text-section3-r textarea {
+    width: 640px;
+    height: 120px;
+    background: #E3E3E3;
+    padding: 5px 10px;
+    border: 0;
+    overflow: auto;
+}
+
+.about-us-text-section3-r input[type="submit"] {
+    width: 640px;
+    height: 44px;
+    background: #E3E3E3;
+    color: #4E3A4F;
+    border: 0;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+.footer {
+    width: 100%;
+    background: #32353e;
+}
+
+.footer .contact {
+    width: 510px;
+    height: 358px;
+    margin: 0 auto;
+    position: relative;
+    padding-top: 90px;
+    text-align: center;
+}
+
+.footer .contact h2 {
+    font-size: 21px;
+    font-family: "黑体";
+    color: #fff;
+}
+
+.footer .contact p {
+    font-size: 12px;
+    font-family: "宋体";
+    color: #fff;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.footer .contact div input[type='text'] {
+    float: left;
+    width: 80%;
+    height: 42px;
+    border-right: 0;
+    outline: 0;
+    font-size: 14px;
+    text-indent: 10px;
+    color: #ababab;
+    padding-right: 20px;
+}
+
+.footer .contact div input[type='submit'] {
+    float: left;
+    width: 20%;
+    height: 42px;
+    background: #868686;
+    border: 2px solid #868686;
+    color: #fff;
+    letter-spacing: 5px;
+    padding-left: 5px;
+    font-size: 15px;
+}
+
+.footer .contact ul {
+    padding-top: 35px;
+}
+
+.footer .contact ul li {
+    display: inline-block;
+    margin-right: 25px;
+    cursor: pointer;
+}
+
+.footer .bottom {
+    width: 100%;
+    height: 55px;
+    background: #303039;
+}
+
+.footer .bottom p {
+    color: #fff;
+    font-size: 12px;
+    font-family: "宋体";
+    margin-top: 28px;
+}
+
+.footer .bottom p:nth-child(1) {
+    float: left;
+    margin-left: 100px;
+}
+
+.footer .bottom p:nth-child(2) {
+    float: right;
+    margin-right: 38px;
+}
